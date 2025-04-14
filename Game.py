@@ -5,31 +5,36 @@ from freegames import line
 
 def grid():
     """Draw tic-tac-toe grid."""
-    line(-67, 200, -67, -200)
-    line(67, 200, 67, -200)
-    line(-200, -67, 200, -67)
-    line(-200, 67, 200, 67)
+    # Vertical lines (at x = 100, 200)
+    #(starting x, starting y, ending x, ending y)
+    line(100, 0, 100, 300)   # First vertical line
+    line(200, 0, 200, 300)   # Second vertical line
+
+    # Horizontal lines (at y = 100, 200)
+    #(starting x, starting y, ending x, ending y)
+    line(0, 100, 300, 100)   # First horizontal line
+    line(0, 200, 300, 200)   # Second horizontal line
 
 
 def drawx(x, y):
-    """Draw X player."""
+    """Draw X player inside 100x100 cell."""
     color('blue')
-    line(x, y, x + 133, y + 133)
-    line(x, y + 133, x + 133, y)
+    line(x + 10, y + 10, x + 90, y + 90)
+    line(x + 10, y + 90, x + 90, y + 10)
 
 
 def drawo(x, y):
-    """Draw O player."""
+    """Draw O player inside 100x100 cell."""
     up()
     color('red')
-    goto(x + 67, y + 5)
+    goto(x + 50, y + 10)
     down()
-    circle(62)
+    circle(40)
 
 
 def floor(value):
-    """Round value down to grid with square size 133."""
-    return ((value + 200) // 133) * 133 - 200
+    """Snap to nearest 100 unit grid."""
+    return (value // 100) * 100
 
 
 state = {'player': 0}
@@ -46,8 +51,13 @@ def tap(x, y):
     update()
     state['player'] = not player
 
-
-setup(420, 420, 370, 0)
+#set size of window to 300x300
+setup(300, 300)
+#set coordinates
+#top left is 0,0, top right is 300,0
+#bottom right is 300,300, bottom left is 0,300
+#this makes the setup fill the screen since I changed the dimmensions to make the math clearer.
+setworldcoordinates(0, 300, 300, 0)
 hideturtle()
 tracer(False)
 grid()
