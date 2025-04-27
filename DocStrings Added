@@ -80,7 +80,7 @@ def tap(x, y):
 
     Handle when a player taps the screen. listen for the location, pass the x/y values to our floor() function
 
-    floor() gives us a consistent spot on the board where we draw an x or o depending on who's turn 	it is  
+    floor() gives us a consistent spot on the board where we draw an x or o depending on who's turn it is  
 
     Update the screen and change who's turn it is
     
