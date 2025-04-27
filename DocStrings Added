@@ -113,10 +113,11 @@ tracer(False)
 grid()
 update()
 onscreenclick(tap)
-done()
 
 print(grid.__doc__)
 print(drawx.__doc__)
 print(drawo.__doc__)
 print(floor.__doc__)
 print(tap.__doc__)
+
+done()
