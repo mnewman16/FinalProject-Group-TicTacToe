@@ -67,10 +67,6 @@ def floor(value):
 state = {'player': 0}
 players = [drawx, drawo]
 
-#
-#
-#then we 
-
 def tap(x, y):
     """
     Draw X or O in tapped square.
