@@ -67,12 +67,20 @@ def floor(value):
 state = {'player': 0}
 players = [drawx, drawo]
 
-#handle when a player taps the screen. listen for the location, pass the x/y values to our floor() function
-#floor() gives us a consistent spot on the board where we draw an x or o depending on who's turn it is
-#then we update the screen and change who's turn it is
+#
+#
+#then we 
 
 def tap(x, y):
-    """Draw X or O in tapped square."""
+    """
+    Draw X or O in tapped square.
+
+    Handle when a player taps the screen. listen for the location, pass the x/y values to our floor() function
+
+    floor() gives us a consistent spot on the board where we draw an x or o depending on who's turn it is  
+
+    Update the screen and change who's turn it is
+    """
     x = floor(x)
     y = floor(y)
     player = state['player']
