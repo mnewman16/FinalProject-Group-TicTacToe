@@ -1,3 +1,10 @@
+"""Group 2 Final Project
+Michael Newman, Alexandria Zitting, Danh Doan
+Modified version of freegames TicTacToe:
+https://grantjenks.com/docs/freegames/tictactoe.html
+"""
+
+
 #import turtle for turtle graphics
 
 from turtle import *
